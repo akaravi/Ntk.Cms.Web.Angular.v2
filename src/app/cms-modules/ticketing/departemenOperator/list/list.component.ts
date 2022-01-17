@@ -26,6 +26,7 @@ import { MatSort } from '@angular/material/sort';
 import { PageEvent } from '@angular/material/paginator';
 import { Subscription } from 'rxjs';
 import { TokenHelper } from 'src/app/core/helpers/tokenHelper';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-ticketing-departemenoperator-list',
@@ -40,6 +41,7 @@ export class TicketingDepartemenOperatorListComponent implements OnInit, OnDestr
     public publicHelper: PublicHelper,
     private cmsToastrService: CmsToastrService,
     private router: Router,
+    private translate: TranslateService,
     private tokenHelper: TokenHelper,
     private cdr: ChangeDetectorRef,
     public dialog: MatDialog) {
@@ -206,7 +208,7 @@ export class TicketingDepartemenOperatorListComponent implements OnInit, OnDestr
       this.requestDepartemenId == null ||
       this.requestDepartemenId === 0
     ) {
-      const message = 'محتوا انتخاب نشده است';
+      const message = this.translate.instant('MESSAGE.Content_Not_Selected');
       this.cmsToastrService.typeErrorSelected(message);
 
       return;

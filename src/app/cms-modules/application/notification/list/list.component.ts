@@ -26,6 +26,7 @@ import { Subscription } from 'rxjs';
 import { ApplicationLogNotificationViewComponent } from '../view/view.component';
 import { ApplicationLogNotificationActionSendComponent } from '../action-send/action-send.component';
 import { TokenHelper } from 'src/app/core/helpers/tokenHelper';
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-application-notification-list',
   templateUrl: './list.component.html',
@@ -40,6 +41,7 @@ export class ApplicationLogNotificationListComponent implements OnInit, OnDestro
     private cdr: ChangeDetectorRef,
     private cmsToastrService: CmsToastrService,
     private router: Router,
+    private translate: TranslateService,
     private tokenHelper: TokenHelper,
     public dialog: MatDialog) {
     this.loading.cdr = this.cdr;
@@ -218,7 +220,7 @@ export class ApplicationLogNotificationListComponent implements OnInit, OnDestro
       this.requestLinkApplicationId == null ||
       this.requestLinkApplicationId === 0
     ) {
-      const message = 'محتوا انتخاب نشده است';
+      const message = this.translate.instant('MESSAGE.Content_Not_Selected');
       this.cmsToastrService.typeErrorSelected(message);
       return;
     }

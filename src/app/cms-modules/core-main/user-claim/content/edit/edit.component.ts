@@ -96,7 +96,7 @@ export class CoreUserClaimContentEditComponent implements OnInit ,OnDestroy {
 
   ngOnInit(): void {
     if (this.requestId > 0) {
-      this.formInfo.FormTitle = 'ویرایش  ';
+this.formInfo.FormTitle =this.translate.instant('TITLE.Edit');
       this.DataGetOneContent();
     } else {
       this.cmsToastrService.typeErrorComponentAction();

@@ -24,6 +24,7 @@ import { ProgressSpinnerModel } from 'src/app/core/models/progressSpinnerModel';
 import { Subscription } from 'rxjs';
 import { PublicHelper } from 'src/app/core/helpers/publicHelper';
 import { TokenHelper } from 'src/app/core/helpers/tokenHelper';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-core-site-domainalias-edit',
@@ -41,6 +42,7 @@ export class CoreLogSmsEditComponent implements OnInit, OnDestroy {
     private tokenHelper: TokenHelper,
     private cdr: ChangeDetectorRef,
     public publicHelper: PublicHelper,
+    private translate: TranslateService,
   ) {
     this.loading.cdr = this.cdr;
     if (data) {
@@ -66,7 +68,7 @@ export class CoreLogSmsEditComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     if (this.requestId && this.requestId.length > 0) {
-      this.formInfo.FormTitle = 'ویرایش  ';
+this.formInfo.FormTitle =this.translate.instant('TITLE.Edit');
       this.DataGetOneContent();
     } else {
       this.cmsToastrService.typeErrorComponentAction();

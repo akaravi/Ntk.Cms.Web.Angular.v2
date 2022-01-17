@@ -77,7 +77,7 @@
     <!-- LinkPropertyTypeUsageId Field -->
     <app-estate-propertytypeusage-selector (optionChange)="onActionSelectorSelectUsage($event)"
       [optionDisabled]="!fieldsInfo['LinkPropertyTypeUsageId']?.AccessEditField" [optionTypeView]="2"
-      [optionSelectForce]="dataModel.LinkPropertyTypeUsageId" [optionPlaceholder]="'نوع کاربری'">
+      [optionSelectForce]="dataModel.LinkPropertyTypeUsageId" [optionPlaceholder]="{{'TITLE.User_Type' | translate}}">
       <mat-icon matSuffix *ngIf="dataModel.LinkPropertyTypeUsageId && dataModel.LinkPropertyTypeUsageId?.length>0"
         matSuffix mat-icon-button aria-label="Clear" (click)="dataModel.LinkPropertyTypeUsageId = null;">close
       </mat-icon>
@@ -89,7 +89,7 @@
     <!-- LinkPropertyTypeLanduseId Field -->
     <app-estate-propertytypelanduse-selector (optionChange)="onActionSelectorSelectLanduse($event)"
       [optionDisabled]="!fieldsInfo['LinkPropertyTypeLanduseId']?.AccessEditField" [optionTypeView]="2"
-      [optionSelectForce]="dataModel.LinkPropertyTypeLanduseId" [optionPlaceholder]="'نوع ملک'">
+      [optionSelectForce]="dataModel.LinkPropertyTypeLanduseId" [optionPlaceholder]="{{'TITLE.Property_Type' | translate}}">
 
       <mat-icon matSuffix *ngIf="dataModel.LinkPropertyTypeLanduseId && dataModel.LinkPropertyTypeLanduseId?.length>0"
         matSuffix mat-icon-button aria-label="Clear" (click)="onActionSelectorSelectLanduse(null)">close
@@ -102,7 +102,7 @@
     <!-- LinkContractTypeIds Field -->
     <app-estate-contract-type-selector (optionChange)="onActionSelectorContarctType($event)" [optionTypeView]="2"
       [optionDisabled]="!fieldsInfo['LinkContractTypeId']?.AccessAddField"
-      [optionSelectForce]="dataModel.LinkContractTypeId" [optionPlaceholder]="'نوع معامله'">
+      [optionSelectForce]="dataModel.LinkContractTypeId" [optionPlaceholder]="{{'TITLE.Type_Of_Transaction' | translate}}">
       <mat-icon matSuffix *ngIf="dataModel.LinkContractTypeId && dataModel.LinkContractTypeId?.length>0" matSuffix
         mat-icon-button aria-label="Clear" (click)="dataModel.LinkContractTypeId = null;">close
       </mat-icon>
@@ -308,7 +308,7 @@
 
     <div *ngIf="dataModel?.UrlViewContentQRCodeBase64?.length>0 && dataModel?.UrlViewContent?.length>0">
       <a href="{{dataModel.UrlViewContent}}" target="_blank">
-        <img [src]="dataModel.UrlViewContentQRCodeBase64" alt="بارکد را اسکن کنید" height="300px" width="300px">
+        <img [src]="dataModel.UrlViewContentQRCodeBase64" alt="{{'TITLE.Scan_The_Barcode' | translate}}" height="300px" width="300px">
       </a>
       <app-cms-qdoc [optionUrl]="dataModel.UrlViewContent"></app-cms-qdoc>
     </div>

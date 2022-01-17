@@ -200,7 +200,7 @@ export class TicketingAnswerListComponent implements OnInit, OnDestroy {
         this.requestLinkTaskId == null ||
         this.requestLinkTaskId === 0)
     ) {
-      const message = 'محتوا انتخاب نشده است';
+      const message = this.translate.instant('MESSAGE.Content_Not_Selected');
       this.cmsToastrService.typeErrorSelected(message);
 
       return;

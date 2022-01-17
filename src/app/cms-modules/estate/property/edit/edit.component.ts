@@ -44,7 +44,6 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-estate-property-edit',
   templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.scss']
 })
 export class EstatePropertyEditComponent implements OnInit,OnDestroy {
   requestId = '';
@@ -128,7 +127,7 @@ export class EstatePropertyEditComponent implements OnInit,OnDestroy {
       this.router.navigate(['/estate/property']);
       return;
     }
-    this.formInfo.FormTitle = 'ویرایش  ';
+    this.formInfo.FormTitle =this.translate.instant('TITLE.Edit');
     this.DataGetOne();
     this.getEnumRecordStatus();
     this.getEstateContractType();

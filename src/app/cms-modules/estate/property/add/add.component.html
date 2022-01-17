@@ -19,7 +19,7 @@
         <!-- LinkPropertyTypeUsageId Field -->
         <app-estate-propertytypeusage-selector (optionChange)="onActionSelectorSelectUsage($event)"
           [optionDisabled]="!fieldsInfo['LinkPropertyTypeUsageId']?.AccessAddField" [optionTypeView]="2"
-          [optionSelectForce]="dataModel.LinkPropertyTypeUsageId" [optionPlaceholder]="'نوع کاربری'">
+          [optionSelectForce]="dataModel.LinkPropertyTypeUsageId" [optionPlaceholder]="{{'TITLE.User_Type' | translate}}">
         </app-estate-propertytypeusage-selector>
 
         <!-- LinkPropertyTypeLanduseId Field -->
@@ -38,7 +38,7 @@
         <app-estate-propertytypelanduse-selector (optionChange)="onActionSelectorSelectLanduse($event)"
           *ngIf="(!listTypeLanduse || listTypeLanduse.length===0) && dataModel.LinkPropertyTypeUsageId && dataModel.LinkPropertyTypeUsageId.length>0"
           [optionDisabled]="!fieldsInfo['LinkPropertyTypeLanduseId']?.AccessAddField" [optionTypeView]="2"
-          [optionSelectForce]="dataModel.LinkPropertyTypeLanduseId" [optionPlaceholder]="'نوع ملک'"
+          [optionSelectForce]="dataModel.LinkPropertyTypeLanduseId" [optionPlaceholder]="{{'TITLE.Property_Type' | translate}}"
           [optionTypeUsageId]="dataModel.LinkPropertyTypeUsageId">
 
         </app-estate-propertytypelanduse-selector>
@@ -356,7 +356,7 @@
       <mat-step label="{{'TITLE.Transaction' | translate}}" state="seo">
         <p>نوع معامله این ملک را مشخص کنید</p>
         <app-estate-contract-type-selector (optionChange)="onActionSelectorContractType($event)" [optionTypeView]="2"
-          [optionDisabled]="false" [optionPlaceholder]="'نوع معامله'"
+          [optionDisabled]="false" [optionPlaceholder]="{{'TITLE.Type_Of_Transaction' | translate}}"
           [optionSelectForce]="contractDataModel.LinkEstateContractTypeId">
         </app-estate-contract-type-selector>
 

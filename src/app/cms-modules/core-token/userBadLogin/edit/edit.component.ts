@@ -24,6 +24,7 @@ import { ProgressSpinnerModel } from 'src/app/core/models/progressSpinnerModel';
 import { Subscription } from 'rxjs';
 import { PublicHelper } from 'src/app/core/helpers/publicHelper';
 import { TokenHelper } from 'src/app/core/helpers/tokenHelper';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-core-site-domainalias-edit',
@@ -39,6 +40,7 @@ export class CoreTokenUserBadLoginEditComponent implements OnInit, OnDestroy {
     public coreTokenUserBadLoginService: CoreTokenUserBadLoginService,
     private cmsToastrService: CmsToastrService,
     private tokenHelper: TokenHelper,
+    private translate: TranslateService,
     private cdr: ChangeDetectorRef,
     public publicHelper: PublicHelper,
   ) {
@@ -68,7 +70,7 @@ export class CoreTokenUserBadLoginEditComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     if (this.requestId && this.requestId.length > 0) {
-      this.formInfo.FormTitle = 'ویرایش  ';
+this.formInfo.FormTitle =this.translate.instant('TITLE.Edit');
       this.DataGetOneContent();
     } else {
       this.cmsToastrService.typeErrorComponentAction();

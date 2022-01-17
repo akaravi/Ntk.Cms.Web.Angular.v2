@@ -151,7 +151,7 @@ export class NewsContentEditComponent implements OnInit, AfterViewInit {
     this.formInfo.FormAlert = this.translate.instant('MESSAGE.get_information_from_the_server');
     this.formInfo.FormError = '';
     const pName = this.constructor.name + 'main';
-    this.loading.Start(pName,'دریافت  لیست اطلاعات');
+    this.loading.Start(pName,this.translate.instant('MESSAGE.Get_Information_List'));
     /*َAccess Field*/
     this.contentService.setAccessLoad();
     this.contentService

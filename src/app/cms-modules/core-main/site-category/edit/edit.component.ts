@@ -74,7 +74,7 @@ export class CoreSiteCategoryEditComponent implements OnInit {
   dataCoreSiteCategoryCmsModuleModel: CoreSiteCategoryCmsModuleModel[];
   ngOnInit(): void {
     if (this.requestId > 0) {
-      this.formInfo.FormTitle = 'ویرایش  ';
+this.formInfo.FormTitle =this.translate.instant('TITLE.Edit');
 
     } else {
       this.cmsToastrService.typeErrorComponentAction();

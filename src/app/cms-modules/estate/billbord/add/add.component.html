@@ -94,13 +94,13 @@
     <!-- LinkPropertyTypeUsageIds Field -->
     <app-estate-property-type-usage-autocomplete (optionChange)="onActionSelectorSelectUsage($event)"
       [optionDisabled]="!fieldsInfo['LinkPropertyTypeUsageIds']?.AccessAddField"
-      [optionSelectForce]="dataModel.LinkPropertyTypeUsageIds" [optionPlaceholder]="'نوع کاربری'">
+      [optionSelectForce]="dataModel.LinkPropertyTypeUsageIds" [optionPlaceholder]="{{'TITLE.User_Type' | translate}}">
     </app-estate-property-type-usage-autocomplete>
 
     <!-- LinkPropertyTypeLanduseIds Field -->
     <app-estate-property-type-landuse-autocomplete (optionChange)="onActionSelectorSelectLanduse($event)"
       [optionDisabled]="!fieldsInfo['LinkPropertyTypeLanduseIds']?.AccessAddField"
-      [optionSelectForce]="dataModel.LinkPropertyTypeLanduseIds" [optionPlaceholder]="'نوع ملک'">
+      [optionSelectForce]="dataModel.LinkPropertyTypeLanduseIds" [optionPlaceholder]="{{'TITLE.Property_Type' | translate}}">
 
     </app-estate-property-type-landuse-autocomplete>
 
@@ -108,7 +108,7 @@
     <!-- LinkContractTypeIds Field -->
     <app-estate-contract-type-autocomplete (optionChange)="onActionSelectorContarctType($event)"
       [optionDisabled]="!fieldsInfo['LinkContractTypeIds']?.AccessAddField"
-      [optionSelectForce]="dataModel.LinkContractTypeIds" [optionPlaceholder]="'نوع معامله'">
+      [optionSelectForce]="dataModel.LinkContractTypeIds" [optionPlaceholder]="{{'TITLE.Type_Of_Transaction' | translate}}">
     </app-estate-contract-type-autocomplete>
     <!-- LinkLocationIds Field -->
     <app-cms-location-autocomplete (optionChange)="onActionSelectorLocation($event)"
@@ -126,7 +126,7 @@
     <br>
     <div *ngIf="dataModel?.UrlViewContentQRCodeBase64?.length>0 && dataModel?.UrlViewContent?.length>0">
       <a href="{{dataModel.UrlViewContent}}" target="_blank">
-        <img [src]="dataModel.UrlViewContentQRCodeBase64" alt="بارکد را اسکن کنید" height="300px" width="300px">
+        <img [src]="dataModel.UrlViewContentQRCodeBase64" alt="{{'TITLE.Scan_The_Barcode' | translate}}" height="300px" width="300px">
       </a>
       <app-cms-qdoc [optionUrl]="dataModel.UrlViewContent"></app-cms-qdoc>
     </div>

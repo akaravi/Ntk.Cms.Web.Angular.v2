@@ -2,7 +2,7 @@
   <h4> {{'TITLE.Edit' | translate}}</h4>
   {{'TITLE.In_This_Section_You_Can_Edit_Your_Ad' | translate}}
   <br>
-  {{'TITLE.Edit' | translate}} "{{ formInfo.FormTitle }}"
+  <div  dir="ltr"> {{'TITLE.Edit' | translate}} "{{ formInfo.FormTitle }}" </div>
 </app-cms-html-notice>
 <form (ngSubmit)="onFormSubmit()" #vform="ngForm">
   <!-- <div class="ntk-cms-html-card-header"> -->
@@ -20,14 +20,14 @@
         <!-- LinkPropertyTypeUsageId Field -->
         <app-estate-propertytypeusage-selector (optionChange)="onActionSelectorSelectUsage($event)"
           [optionDisabled]="!fieldsInfo['LinkPropertyTypeUsageId']?.AccessEditField" [optionTypeView]="2"
-          [optionSelectForce]="dataModel.LinkPropertyTypeUsageId" [optionPlaceholder]="'نوع کاربری'">
+          [optionSelectForce]="dataModel.LinkPropertyTypeUsageId" [optionPlaceholder]="{{'TITLE.User_Type' | translate}}">
         </app-estate-propertytypeusage-selector>
         <br>
         <!-- LinkPropertyTypeLanduseId Field -->
         <app-estate-propertytypelanduse-selector (optionChange)="onActionSelectorSelectLanduse($event)"
           *ngIf="dataModel.LinkPropertyTypeUsageId && dataModel.LinkPropertyTypeUsageId.length>0"
           [optionDisabled]="!fieldsInfo['LinkPropertyTypeLanduseId']?.AccessEditField" [optionTypeView]="2"
-          [optionSelectForce]="dataModel.LinkPropertyTypeLanduseId" [optionPlaceholder]="'نوع ملک'"
+          [optionSelectForce]="dataModel.LinkPropertyTypeLanduseId" [optionPlaceholder]="{{'TITLE.Property_Type' | translate}}"
           [optionTypeUsageId]="dataModel.LinkPropertyTypeUsageId">
         </app-estate-propertytypelanduse-selector>
         <br>
@@ -432,7 +432,7 @@
         <hr>
         <p>نوع معامله این ملک را مشخص کنید</p>
         <app-estate-contract-type-selector (optionChange)="onActionSelectorContractType($event)"
-          [optionDisabled]="false" [optionTypeView]="2" [optionPlaceholder]="'نوع معامله'"
+          [optionDisabled]="false" [optionTypeView]="2" [optionPlaceholder]="{{'TITLE.Type_Of_Transaction' | translate}}"
           [optionSelectForce]="contractDataModel.LinkEstateContractTypeId">
         </app-estate-contract-type-selector>
         <div class="container" *ngIf="contractTypeSelected && contractTypeSelected.Id.length>0">
@@ -653,7 +653,7 @@
           <div class="col-md-6 col-sm-6 col-xs-9" height="300px" width="300px" style="float: left; text-align: center;">
             <div *ngIf="dataModel?.UrlViewContentQRCodeBase64?.length>0 && dataModel?.UrlViewContent?.length>0">
               <a href="{{dataModel.UrlViewContent}}" target="_blank">
-                <img [src]="dataModel.UrlViewContentQRCodeBase64" alt="بارکد را اسکن کنید" height="200px" width="200px">
+                <img [src]="dataModel.UrlViewContentQRCodeBase64" alt="{{'TITLE.Scan_The_Barcode' | translate}}" height="200px" width="200px">
               </a>
               <span class="navi-icon" [cdkCopyToClipboard]="dataModel.UrlViewContent" (click)="onActionCopied()">
                 <i class="flaticon2-copy"></i></span>

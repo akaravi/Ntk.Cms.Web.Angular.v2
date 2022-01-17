@@ -197,7 +197,7 @@ export class TicketingTemplateListComponent implements OnInit, OnDestroy {
       (this.categoryModelSelected && this.categoryModelSelected.Id === 0) &&
       (this.requestDepartemenId == null || this.requestDepartemenId === 0)
     ) {
-      const message = 'محتوا انتخاب نشده است';
+      const message = this.translate.instant('MESSAGE.Content_Not_Selected');
       this.cmsToastrService.typeErrorSelected(message);
 
       return;

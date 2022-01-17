@@ -72,7 +72,7 @@ export class SmsMainApiPathPriceServiceEditComponent implements OnInit {
   dataSmsMainApiPathPriceServiceModel: SmsMainApiPathPriceServiceModel[];
   ngOnInit(): void {
     if (this.requestId.length > 0) {
-      this.formInfo.FormTitle = 'ویرایش  ';
+this.formInfo.FormTitle =this.translate.instant('TITLE.Edit');
 
     } else {
       this.cmsToastrService.typeErrorComponentAction();

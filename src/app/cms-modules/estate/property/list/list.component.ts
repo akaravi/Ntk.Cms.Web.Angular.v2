@@ -38,7 +38,6 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: "app-estate-property-list",
   templateUrl: "./list.component.html",
-  styleUrls: ["./list.component.scss"],
 })
 export class EstatePropertyListComponent
   implements OnInit, OnDestroy, AfterViewInit {
@@ -200,8 +199,7 @@ export class EstatePropertyListComponent
     this.tableRowSelected = new EstatePropertyModel();
 
     const pName = this.constructor.name + "main";
-    this.loading.Start(pName,'دریافت  لیست اطلاعات');
-
+    this.loading.Start(pName,this.translate.instant('MESSAGE.Get_Information_List'));
     this.filteModelProperty.AccessLoad = true;
     /*filter CLone*/
     const filterModel = JSON.parse(JSON.stringify(this.filteModelProperty));
@@ -369,7 +367,7 @@ export class EstatePropertyListComponent
       (this.requestLinkPropertyTypeLanduseId == null ||
         this.requestLinkPropertyTypeLanduseId.length === 0)
     ) {
-      const message = "محتوا انتخاب نشده است";
+      const message = this.translate.instant('MESSAGE.Content_Not_Selected');
       this.cmsToastrService.typeErrorSelected(message);
 
       return;
@@ -464,8 +462,7 @@ export class EstatePropertyListComponent
     }
     const title = this.translate.instant('MESSAGE.Please_Confirm');
     const message =
-      "آیا مایل به حدف این محتوا می باشید " +
-      "?" +
+    this.translate.instant('MESSAGE.Do_You_Want_To_Delete_This_Content') +
       "<br> ( " +
       this.tableRowSelected.Title +
       " ) ";
@@ -474,8 +471,7 @@ export class EstatePropertyListComponent
       .then((confirmed) => {
         if (confirmed) {
           const pName = this.constructor.name + "main";
-          this.loading.Start(pName,'در حال حذف اطلاعات');
-
+          this.loading.Start(pName,this.translate.instant('MESSAGE.Deleting_Information'));
           this.estatePropertyService
             .ServiceDelete(this.tableRowSelected.Id)
             .subscribe(
@@ -596,7 +592,7 @@ export class EstatePropertyListComponent
     }
 
     const pName = this.constructor.name + "ServiceGetOneById";
-    this.loading.Start(pName, "دریافت اطلاعات ملک");
+    this.loading.Start(pName,this.translate.instant('MESSAGE.Get_Property_Information'));
     this.estatePropertyService
       .ServiceGetOneById(this.tableRowSelected.Id)
       .subscribe(

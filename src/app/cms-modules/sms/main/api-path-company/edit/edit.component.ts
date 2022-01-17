@@ -67,7 +67,7 @@ export class SmsMainApiPathCompanyEditComponent implements OnInit {
   dataSmsMainApiPathCompanyModel: SmsMainApiPathCompanyModel[];
   ngOnInit(): void {
     if (this.requestId.length > 0) {
-      this.formInfo.FormTitle = 'ویرایش  ';
+this.formInfo.FormTitle =this.translate.instant('TITLE.Edit');
 
     } else {
       this.cmsToastrService.typeErrorComponentAction();

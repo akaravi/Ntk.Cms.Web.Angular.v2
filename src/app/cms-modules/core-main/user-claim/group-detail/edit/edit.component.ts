@@ -70,7 +70,7 @@ export class CoreUserClaimGroupDetailEditComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.requestModel && this.requestModel.LinkUserClaimTypeId > 0) {
-      this.formInfo.FormTitle = 'ویرایش  ';
+this.formInfo.FormTitle =this.translate.instant('TITLE.Edit');
       this.DataGetOneContent();
     } else {
       this.cmsToastrService.typeErrorComponentAction();

@@ -7,7 +7,7 @@
     <mat-card-title>{{dataModel.Title}}</mat-card-title>
     <mat-card-subtitle>ver : {{dataModel.AppVersion}}</mat-card-subtitle>
   </mat-card-header>
-  <img [src]="dataModel.DownloadLinkSrcByDomainQRCodeBase64" alt="بارکد را اسکن کنید" height="300px" width="300px">
+  <img [src]="dataModel.DownloadLinkSrcByDomainQRCodeBase64" alt="{{'TITLE.Scan_The_Barcode' | translate}}" height="300px" width="300px">
   <img [src]="dataModel.LinkMainImageIdSrc" *ngIf="dataModel.LinkMainImageId>0 &&dataModel.LinkMainImageIdSrc.length>0"
     height="300px" width="300px">
   <mat-card-content>

@@ -254,7 +254,7 @@ export class BlogCommentListComponent implements OnInit, OnDestroy {
       this.requestContentId == null ||
       this.requestContentId === 0
     ) {
-      const message = 'محتوا انتخاب نشده است';
+      const message = this.translate.instant('MESSAGE.Content_Not_Selected');
       this.cmsToastrService.typeErrorSelected(message);
 
       return;

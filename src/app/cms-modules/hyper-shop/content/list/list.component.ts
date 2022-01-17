@@ -198,7 +198,7 @@ export class HyperShopContentListComponent implements OnInit, OnDestroy {
         this.requestPareintId == null ||
         this.requestPareintId.length === 0)
     ) {
-      const message = 'محتوا انتخاب نشده است';
+      const message = this.translate.instant('MESSAGE.Content_Not_Selected');
       this.cmsToastrService.typeErrorSelected(message);
 
       return;
