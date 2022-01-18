@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { InlineSVGModule } from 'ng-inline-svg';
+import { InlineSVGModule } from 'ng-inline-svg-2';
 import { Subheader1Component } from './subheader1/subheader1.component';
 import { Subheader2Component } from './subheader2/subheader2.component';
 import { Subheader3Component } from './subheader3/subheader3.component';

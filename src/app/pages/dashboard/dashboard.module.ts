@@ -28,7 +28,7 @@ import {
   NewsContentService
 } from 'ntk-cms-api';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { InlineSVGModule } from 'ng-inline-svg';
+import { CmsFileManagerModule } from 'src/filemanager-api';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { NewsContentWidget2Component } from 'src/app/cms-modules/news/content/widget/widget2.component';
 import { CmsHtmlWidgetComponent } from 'src/app/shared/cms-html-widget/cms-html-widget.component';
@@ -47,6 +47,7 @@ import { EstatePropertyWidgetComponent } from 'src/app/cms-modules/estate/proper
 import { EstatePropertyWidget2Component } from 'src/app/cms-modules/estate/property/widget/widget2.component';
 import { EstatePropertyWidgetAddComponent } from 'src/app/cms-modules/estate/property/widget/widget-add.component';
 import { CoreUserClaimContentWidgetStatusComponent } from 'src/app/cms-modules/core-main/user-claim/content/widget/widget-status.component';
+import { InlineSVGModule } from 'ng-inline-svg-2';
 
 @NgModule({
   declarations: [

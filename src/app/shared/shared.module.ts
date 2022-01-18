@@ -70,7 +70,7 @@ import { CmsTagAutocompleteComponent } from './cms-tag-autocomplete/cms-tag-auto
 import { TranslationModule } from '../core/i18n/translation.module';
 import { CmsTokenAccessComponent } from './cms-token-access/cmsTokenAccess.component';
 import { CmsHtmlNoticeComponent } from './cms-html-notice/cms-html-notice.component';
-import { InlineSVGModule } from 'ng-inline-svg';
+
 import { CmsHtmlCardComponent } from './cms-html-card/cms-html-card.component';
 import { CmsHtmlModalComponent } from './cms-html-modal/cms-html-modal.component';
 import { CmsHtmlListComponent } from './cms-html-list/cms-html-list.component';
@@ -87,6 +87,7 @@ import { CmsLinkToComponent } from './cms-link-to/cms-link-to.component';
 import { CmsBankpaymentTransactionInfoComponent } from './cms-bankpayment-transaction-info/cms-bankpayment-transaction-info.component';
 import { CmsViewComponent } from './cms-view/cms-view.component';
 import { DirDirective } from '../core/directive/dir.drection';
+import { InlineSVGModule } from 'ng-inline-svg-2';
 
 @NgModule({
     imports: [

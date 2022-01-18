@@ -70,3 +70,25 @@ https://windowsloop.com/windows-sandbox-shared-folder/
 
 BabelEdit
 https://www.codeandweb.com/babeledit/start-download?os=win&bits=64
+
+=========================
+//it is version mismatch, just update all dependencies with npm-check-updates
+npm i -g npm-check-updates
+ncu -u
+npm install
+
+=========================
+npm uninstall -g @angular/cli
+npm cache clean
+npm install -g @angular/cli`
+
+npm update @angular/cli @angular/cdk rxjs
+npm install -S @angular/material @angular/cdk @angular/animations
+npm uninstall @angular/core
+npm install -S @angular/core
+
+
+ENDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+مشکل با بسته های زیر
+npm install ngx-icon-picker --save
+npm install apexcharts ng-apexcharts --save

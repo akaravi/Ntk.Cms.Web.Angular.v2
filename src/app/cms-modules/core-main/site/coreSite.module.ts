@@ -28,7 +28,6 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { TagInputModule } from 'ngx-chips';
 import { CoreSiteCategoryCmsModule } from '../site-category/coreSiteCategory.module';
 import { CoreSiteCategoryCmsModuleModule } from '../site-category-module/coreSiteCategoryCmsModule.module';
-import { CmsFileManagerModule } from 'src/filemanager-api';
 import { CoreSiteModuleListComponent } from './moduleList/moduleList.component';
 import { CoreSiteModuleEditComponent } from './moduleEdit/moduleEdit.component';
 import { CoreSiteModuleAddComponent } from './moduleAdd/moduleAdd.component';
@@ -40,7 +39,6 @@ import { CoreSiteUserEditComponent } from './userEdit/userEdit.component';
 import { CoreUserModule } from '../user/coreUser.module';
 import { CoreUserGroupCmsModule } from '../user-group/coreUserGroup.module';
 import { CoreSiteResellerChartComponent } from './reseller-chart/reseller-chart.component';
-import { InlineSVGModule } from 'ng-inline-svg';
 import { CoreSiteModuleSiteInfoComponent } from './module-site-info/module-site-info.component';
 import { CoreSiteModuleSiteOptimazeComponent } from './module-site-optimaze/module-site-optimaze.component';
 

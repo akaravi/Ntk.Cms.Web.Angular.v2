@@ -18,7 +18,7 @@ import { TagInputModule } from 'ngx-chips';
 import { CoreGuideListComponent } from './list/list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CoreInfoComponent } from '../site/info/core-info.component';
-import { InlineSVGModule } from 'ng-inline-svg';
+import { InlineSVGModule } from 'ng-inline-svg-2';
 
 
 @NgModule({

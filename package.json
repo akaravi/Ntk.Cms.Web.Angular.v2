@@ -43,7 +43,7 @@
     "leaflet": "^1.7.1",
     "moment": "^2.29.1",
     "ng-apexcharts": "^1.6.0",
-    "ng-inline-svg": "^13.1.2",
+    "ng-inline-svg-2": "^14.0.1",
     "ngx-awesome-uploader": "^13.0.0",
     "ngx-chips": "^3.0.0",
     "ngx-color-picker": "^11.0.0",
