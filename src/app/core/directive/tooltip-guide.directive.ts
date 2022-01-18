@@ -1,6 +1,5 @@
-import { Directive, Input, ElementRef, HostListener, Renderer2, OnDestroy } from '@angular/core';
+import { Directive, Input, ElementRef, HostListener, Renderer2 } from '@angular/core';
 import { CoreGuideService } from 'ntk-cms-api';
-import { Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { TokenHelper } from '../helpers/tokenHelper';
 import { CmsToastrService } from '../services/cmsToastr.service';

@@ -77,6 +77,8 @@ export class CoreSiteEditComponent implements OnInit , OnDestroy {
   selectFileTypeMainImage = ['jpg', 'jpeg', 'png'];
   fileManagerOpenFormAboutUsLinkImageId = false;
   fileManagerOpenFormLinkFavIconId = false;
+  fileManagerOpenFormPwaIconSize190x192Id = false;
+  fileManagerOpenFormPwaIconSize512x512Id = false;
   fileManagerOpenFormLinkFileIdLogo = false;
   fileManagerOpenFormLinkImageLogoId = false;
   appLanguage = 'fa';
@@ -261,6 +263,14 @@ export class CoreSiteEditComponent implements OnInit , OnDestroy {
   onActionFileSelectedLinkFavIconId(model: NodeInterface): void {
     this.dataModel.LinkFavIconId = model.id;
     this.dataModel.LinkFavIconIdSrc = model.downloadLinksrc;
+  }
+  onActionFileSelectedPwaIconSize190x192Id(model: NodeInterface): void {
+    this.dataModel.PwaIconSize190x192Id = model.id;
+    this.dataModel.PwaIconSize190x192IdSrc = model.downloadLinksrc;
+  }
+  onActionFileSelectedPwaIconSize512x512Id(model: NodeInterface): void {
+    this.dataModel.LinkFavIconId = model.id;
+    this.dataModel.PwaIconSize512x512IdSrc = model.downloadLinksrc;
   }
   onActionFileSelectedLinkImageLogoId(model: NodeInterface): void {
     this.dataModel.LinkImageLogoId = model.id;

@@ -249,7 +249,7 @@
             </ng-container>
             <!-- Action Column -->
             <ng-container matColumnDef="Action">
-              <mat-header-cell *matHeaderCellDef> ... </mat-header-cell>
+              <mat-header-cell *matHeaderCellDef> {{'TITLE.OPTION' | translate}} </mat-header-cell>
               <mat-cell *matCellDef="let row; let i = index" class='Action'>
                 <small (click)="onActionContentOtherInfoEditFromLIst(i)"><mat-icon aria-hidden="false" style="color: blue;" >edit</mat-icon>{{'ACTION.EDIT' | translate}}</small>|
                 <small (click)="onActionContentOtherInfoRemoveFromLIst(i)"><mat-icon aria-hidden="false" style="color: red;" >delete</mat-icon>{{'ACTION.DELETE' | translate}}</small>
@@ -314,7 +314,7 @@
             </ng-container>
             <!-- Action Column -->
             <ng-container matColumnDef="Action">
-              <mat-header-cell *matHeaderCellDef> ... </mat-header-cell>
+              <mat-header-cell *matHeaderCellDef> {{'TITLE.OPTION' | translate}} </mat-header-cell>
               <mat-cell *matCellDef="let row; let i = index" class='Action'>
                 <small (click)="onActionContentSimilarRemoveFromLIst(row)"><mat-icon aria-hidden="false" style="color: red;" >delete</mat-icon>{{'ACTION.DELETE' | translate}}</small>
               </mat-cell>

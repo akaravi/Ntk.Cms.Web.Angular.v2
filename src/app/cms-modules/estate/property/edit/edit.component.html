@@ -581,7 +581,7 @@
             </ng-container>
             <!-- Action Column -->
             <ng-container matColumnDef="Action">
-              <mat-header-cell *matHeaderCellDef> ... </mat-header-cell>
+              <mat-header-cell *matHeaderCellDef> {{'TITLE.OPTION' | translate}} </mat-header-cell>
               <mat-cell *matCellDef="let row; let i = index" class='Action'>
                 <button mat-icon-button>
                   <small (click)="onActionOptionRemoveFromList(i)">

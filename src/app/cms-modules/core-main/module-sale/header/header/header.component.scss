@@ -12,6 +12,9 @@
 .table .tr:nth-child(odd) {
 background-color: #F9F9F9;
 }
+.table .tr:nth-child(even) {
+background-color: #CCFFFF;
+}
 .table .tr{
  display: table-row;
  border-bottom: 1px solid #000;
