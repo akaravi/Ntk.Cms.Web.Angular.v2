@@ -26,9 +26,9 @@
                 index as i
               " [value]="item.Value">{{ item.Description }}</mat-option>
           </mat-select>
-          <mat-hint align="start" ><mat-icon matSuffix class="info-field-icon">info</mat-icon>
-            <strong class="info-field-text">{{fieldsInfo['RecordStatus']?.FieldDescription}}</strong> </mat-hint>
           <mat-hint align="end">{{'TITLE.SELECT_STATUS' | translate}}</mat-hint>
+          <mat-hint align="end" ><mat-icon matTooltip="{{fieldsInfo['RecordStatus']?.FieldDescription}}" matSuffix class="info-field-icon">info</mat-icon>
+            <strong class="info-field-text"></strong></mat-hint>
           <mat-error *ngIf="RecordStatus.errors?.required">
             {{fieldsInfo['RecordStatus']?.FieldTitle}} <strong>{{'MESSAGE.required' | translate}}</strong>
           </mat-error>
@@ -45,9 +45,7 @@
             placeholder="{{fieldsInfo['Title']?.FieldTitle}}" minlength="3" maxlength="100" required />
           <mat-icon matSuffix *ngIf="dataModel.Title" matSuffix mat-icon-button aria-label="Clear"
             (click)="dataModel.Title = ''">close</mat-icon>
-          <mat-icon matSuffix>mode_edit</mat-icon>
-          <mat-hint align="start" ><mat-icon matSuffix class="info-field-icon">info</mat-icon>
-            <strong class="info-field-text">{{fieldsInfo['Title']?.FieldDescription}}</strong> </mat-hint>
+            <mat-icon matTooltip="{{fieldsInfo['Title']?.FieldDescription}}" matSuffix>info</mat-icon>
           <mat-hint align="end">{{ Title.value.length }} / 100</mat-hint>
           <mat-error *ngIf="Title.errors?.required">
             {{fieldsInfo['Title']?.FieldTitle}} <strong>{{'MESSAGE.required' | translate}}</strong>
@@ -61,9 +59,7 @@
             placeholder="{{fieldsInfo['Description']?.FieldTitle}}" minlength="1" maxlength="500" rows="5"></textarea>
           <mat-icon matSuffix *ngIf="dataModel.Description" matSuffix mat-icon-button aria-label="Clear"
             (click)="dataModel.Description = ''">close</mat-icon>
-          <mat-icon matSuffix>mode_edit</mat-icon>
-          <mat-hint align="start" ><mat-icon matSuffix class="info-field-icon">info</mat-icon>
-            <strong class="info-field-text">{{fieldsInfo['Description']?.FieldDescription}}</strong> </mat-hint>
+            <mat-icon matTooltip="{{fieldsInfo['Description']?.FieldDescription}}" matSuffix>info</mat-icon>
           <mat-hint align="end">{{ Description.value.length }} / 500</mat-hint>
           <mat-error *ngIf="Description.errors?.required">
             {{fieldsInfo['Description']?.FieldTitle}} <strong>{{'MESSAGE.required' | translate}}</strong>
@@ -79,8 +75,7 @@
             mat-icon-button aria-label="Clear" (click)="dataModel.FromDate = null">close</mat-icon>
           <mat-datepicker-toggle matSuffix [for]="FromDate"></mat-datepicker-toggle>
           <mat-datepicker touchUi #FromDate></mat-datepicker>
-          <mat-hint align="start" ><mat-icon matSuffix class="info-field-icon">info</mat-icon>
-            <strong class="info-field-text">{{fieldsInfo['FromDate']?.FieldDescription}}</strong> </mat-hint>
+          <mat-icon matTooltip="{{fieldsInfo['FromDate']?.FieldDescription}}" matSuffix>info</mat-icon>
         </mat-form-field>
         <!-- ExpireDate Field -->
         <mat-form-field class="ntk-full-width" *ngIf="fieldsInfo['ExpireDate']?.AccessWatchField">
@@ -92,8 +87,7 @@
             mat-icon-button aria-label="Clear" (click)="dataModel.ExpireDate = null">close</mat-icon>
           <mat-datepicker-toggle matSuffix [for]="ExpireDate"></mat-datepicker-toggle>
           <mat-datepicker touchUi #ExpireDate></mat-datepicker>
-          <mat-hint align="start" ><mat-icon matSuffix class="info-field-icon">info</mat-icon>
-            <strong class="info-field-text">{{fieldsInfo['ExpireDate']?.FieldDescription}}</strong> </mat-hint>
+          <mat-icon matTooltip="{{fieldsInfo['ExpireDate']?.FieldDescription}}" matSuffix>info</mat-icon>
         </mat-form-field>
         <hr class="pb-5" />
         <!-- editorConfig Field -->
@@ -119,9 +113,7 @@
             placeholder="لینک وب سایت مرجع محتوا" minlength="3" maxlength="500" />
           <mat-icon matSuffix *ngIf="dataModel.Source" matSuffix mat-icon-button aria-label="Clear"
             (click)="dataModel.Source = ''">close</mat-icon>
-          <mat-icon matSuffix>mode_edit</mat-icon>
-          <mat-hint align="start" ><mat-icon matSuffix class="info-field-icon">info</mat-icon>
-            <strong class="info-field-text">{{fieldsInfo['Source']?.FieldDescription}}</strong> </mat-hint>
+            <mat-icon matTooltip="{{fieldsInfo['Source']?.FieldDescription}}" matSuffix>info</mat-icon>
           <mat-hint align="end">{{ Source.value.length }} / 500</mat-hint>
         </mat-form-field>
         <!-- Tag Field -->

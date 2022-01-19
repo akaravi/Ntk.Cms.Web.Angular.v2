@@ -199,12 +199,12 @@
         <!-- LinkCmsUserId Field -->
         <app-cms-user-selector (optionChange)="onActionSelectorCmsUser($event)"
           [optionDisabled]="!fieldsInfo['LinkCmsUserId']?.AccessEditField" [optionSelectForce]="dataModel.LinkCmsUserId"
-          [optionPlaceholder]="'مالک ملک'">
+          [optionPlaceholder]= "{{'TITLE.Property_Owner' | translate}}">
         </app-cms-user-selector>
         <!-- LinkLocationId Field -->
         <app-cms-location-selector (optionChange)="onActionSelectorLocation($event)"
           [optionDisabled]="!fieldsInfo['LinkLocationId']?.AccessEditField"
-          [optionSelectForce]="dataModel.LinkLocationId" [optionPlaceholder]="'منطقه'">
+          [optionSelectForce]="dataModel.LinkLocationId" [optionPlaceholder]="{{'TITLE.Region' | translate}}">
         </app-cms-location-selector>
         <!-- Address Field -->
         <mat-form-field class="ntk-full-width" *ngIf="fieldsInfo['Address']?.AccessWatchField">

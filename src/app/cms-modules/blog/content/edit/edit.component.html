@@ -45,9 +45,7 @@
             [disabled]="!fieldsInfo['Title']?.AccessEditField" minlength="3" maxlength="100" required />
           <mat-icon matSuffix *ngIf="dataModel.Title" matSuffix mat-icon-button aria-label="Clear"
             (click)="dataModel.Title = ''">close</mat-icon>
-          <mat-icon matSuffix>mode_edit</mat-icon>
-          <mat-hint align="start" ><mat-icon matSuffix class="info-field-icon">info</mat-icon>
-            <strong class="info-field-text">{{fieldsInfo['Title']?.FieldDescription}}</strong> </mat-hint>
+          <mat-icon matTooltip="{{fieldsInfo['Title']?.FieldDescription}}" matSuffix>info</mat-icon>
           <mat-hint align="end">{{ Title.value.length }} / 100</mat-hint>
           <mat-error *ngIf="Title.errors?.required">
             {{fieldsInfo['Title']?.FieldTitle}} <strong>{{'MESSAGE.required' | translate}}</strong>
@@ -61,9 +59,7 @@
             [disabled]="!fieldsInfo['Description']?.AccessEditField" minlength="1" maxlength="500" rows="5"></textarea>
           <mat-icon matSuffix *ngIf="dataModel.Description" matSuffix mat-icon-button aria-label="Clear"
             (click)="dataModel.Description = ''">close</mat-icon>
-          <mat-icon matSuffix>mode_edit</mat-icon>
-          <mat-hint align="start" ><mat-icon matSuffix class="info-field-icon">info</mat-icon>
-            <strong class="info-field-text">{{fieldsInfo['Description']?.FieldDescription}}</strong> </mat-hint>
+          <mat-icon matTooltip="{{fieldsInfo['Description']?.FieldDescription}}" matSuffix>info</mat-icon>
           <mat-hint align="end">{{ Description.value.length }} / 500</mat-hint>
           <mat-error *ngIf="Description.errors?.required">
             {{fieldsInfo['Description']?.FieldTitle}} <strong>{{'MESSAGE.required' | translate}}</strong>
@@ -79,8 +75,7 @@
             mat-icon-button aria-label="Clear" (click)="dataModel.FromDate = null">close</mat-icon>
           <mat-datepicker-toggle matSuffix [for]="FromDate"></mat-datepicker-toggle>
           <mat-datepicker touchUi #FromDate></mat-datepicker>
-          <mat-hint align="start" ><mat-icon matSuffix class="info-field-icon">info</mat-icon>
-            <strong class="info-field-text">{{fieldsInfo['FromDate']?.FieldDescription}}</strong> </mat-hint>
+          <mat-icon matTooltip="{{fieldsInfo['FromDate']?.FieldDescription}}" matSuffix>info</mat-icon>
         </mat-form-field>
 
         <!-- ExpireDate Field -->

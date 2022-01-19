@@ -48,7 +48,7 @@
           <mat-label>{{fieldsInfo['RecordStatus']?.FieldTitle}}</mat-label>
           <mat-select placeholder="{{fieldsInfo['RecordStatus']?.FieldTitle}}"
             [disabled]="!fieldsInfo['RecordStatus']?.AccessAddField" [(ngModel)]="dataModel.RecordStatus"
-            name="dataModel.RecordStatus" #RecordStatus="ngModel" panelClass="recordStatus-{{ dataModel.RecordStatus }}"
+            name="dataModel.RecordStatus" #Reconpm="ngModel" panelClass="recordStatus-{{ dataModel.RecordStatus }}"
             required>
             <mat-option *ngFor="
                   let item of dataModelEnumRecordStatusResult.ListItems;

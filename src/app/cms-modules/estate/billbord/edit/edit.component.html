@@ -111,7 +111,7 @@
       <!-- LinkLocationIds Field -->
       <app-cms-location-autocomplete (optionChange)="onActionSelectorLocation($event)"
         [optionDisabled]="!fieldsInfo['LinkLocationIds']?.AccessAddField"
-        [optionSelectForce]="dataModel.LinkLocationIds" [optionPlaceholder]="'منطقه'">
+        [optionSelectForce]="dataModel.LinkLocationIds" [optionPlaceholder]="{{'TITLE.Region' | translate}}">
       </app-cms-location-autocomplete>
 
       <!-- LinkPropertyIds Field -->
